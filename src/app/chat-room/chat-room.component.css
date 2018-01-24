@@ -23,3 +23,12 @@
     .message_row {
         background-color: #fff;
     }
+    .my-button{
+      background-color: #AF7AC5;
+      color: #F5EEF8;
+      border-radius: 10px !important;
+      border: none;
+    }
+    .my-input{
+        border-radius: 10px !important;
+    }

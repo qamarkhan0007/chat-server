@@ -10,12 +10,21 @@ import { Socket } from 'ng-socket-io';
 export class ChatRoomComponent implements OnInit {
     messages: any = [];
     message = '';
+    alertMessage: any;
     constructor(private socket: Socket) { }
 
     ngOnInit() {
         this.getMessages().subscribe(message => {
             this.messages.push(message);
             console.log('>>>>>messges for get message', this.messages);
+        });
+        this.getUsers().subscribe(data => {
+            const user = data['user'];
+            if (data['event'] === 'left') {
+                this.alertMessage = 'User left: ' + user;
+            }else {
+                this.alertMessage = 'User joined: ' + user;
+            }
         });
     }
 
@@ -31,5 +40,13 @@ export class ChatRoomComponent implements OnInit {
         console.log('>>>>>>>>>>>', this.message);
         this.socket.emit('add-message', {text: this.message});
         this.message = '';
+    }
+    getUsers() {
+        const observable: any = new Observable(observer => {
+            this.socket.on('users-changed', data => {
+                observer.next(data);
+            });
+        });
+        return observable;
     }
 }
