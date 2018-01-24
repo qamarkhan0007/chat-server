@@ -25,6 +25,9 @@ label{
 .my-button{
   background-color: #AF7AC5;
   color: #F5EEF8;
-  border-radius: 1px;
+  border-radius: 3px;
   border: none;
+}
+.my-text{
+  color: #AF7AC5;
 }
