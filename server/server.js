@@ -8,10 +8,22 @@ app.get('/', function (req, res) {
 });
 
 var server = http.createServer(app);
-server.listen(3000);
 var io = socketIo(server);
-io.on('connection', function (socket) {
-  socket.emit('Hello', {
-    greeting: 'Hello Qamar'
+io.on('connection', function(socket){
+
+  socket.on('disconnect', function(){
+    io.emit('users-changed', {user: socket.nickname, event: 'left'});
   });
+
+  socket.on('set-nickname', function(nickname){
+    socket.nickname = nickname;
+    io.emit('users-changed', {user: nickname, event: 'joined'});
+  });
+
+  socket.on('add-message', function(message){
+    io.emit('message', {text: message.text, from: socket.nickname, created: new Date()});
+  });
+});
+server.listen(3000, function(){
+  console.log('Server is running on 3000');
 });

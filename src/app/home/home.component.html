@@ -1,0 +1,12 @@
+<div>
+  <nav>
+    Chat Room
+  </nav>
+  <div class="container">
+  <div>
+    <label>Set Nickname</label>
+    <input type="text" name="nickname" placeholder="Nickname">
+  </div>
+  <button (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
+</div>
+</div>
