@@ -5,7 +5,7 @@
   <div class="container">
   <div>
     <label>Set Nickname</label>
-    <input type="text" name="nickname" placeholder="Nickname">
+    <input type="text" placeholder="Nickname" [(ngModel)]="nickname">
   </div>
   <button (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
 </div>
