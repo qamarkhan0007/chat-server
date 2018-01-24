@@ -7,7 +7,7 @@
     <div class="body-div">
       <div>
         <label>Set Nickname</label><br>
-        <input type="text" placeholder="Nickname" [(ngModel)]="nickname">
+        <input class="my-text" type="text" placeholder="Nickname" [(ngModel)]="nickname">
       </div>
       <br><br>
       <button class="my-button" (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
