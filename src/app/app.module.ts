@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
-const config: SocketIoConfig = { url: 'localhost://3000', options: {}};
+import { FormsModule } from '@angular/forms';
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}};
 
 
 @NgModule({
@@ -17,7 +18,8 @@ const config: SocketIoConfig = { url: 'localhost://3000', options: {}};
   imports: [
     BrowserModule,
     SocketIoModule.forRoot(config),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
