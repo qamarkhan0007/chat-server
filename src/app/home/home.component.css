@@ -1,8 +1,30 @@
 .myNav{
+  margin-left: 25%;
   width: 40%;
-  background-color: #A569BD;
+  background-color: #F5EEF8;
+  color: #AF7AC5;
 }
 .myContainer{
-  width: 100%;
   text-align: center;
+  width: 100%;
+  margin-left: 25%;
+}
+.body-div{
+  width: 40%;
+  margin-left: 25%;
+}
+.subContainer{
+  width: 40%;
+  border: 2px solid #AF7AC5;
+  text-align: center;
+  padding: 50px;
+}
+label{
+  color: #AF7AC5;
+}
+.my-button{
+  background-color: #AF7AC5;
+  color: #F5EEF8;
+  border-radius: 1px;
+  border: none;
 }

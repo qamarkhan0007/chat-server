@@ -1,12 +1,16 @@
 <div class="myContainer">
-  <div class="myNav">
-    Chat Room
+  <div class="subContainer">
+    <div class="myNav">
+      <h3>Chat Room</h3>
+    </div>
+    <br>
+    <div class="body-div">
+      <div>
+        <label>Set Nickname</label><br>
+        <input type="text" placeholder="Nickname" [(ngModel)]="nickname">
+      </div>
+      <br><br>
+      <button class="my-button" (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
+    </div>
   </div>
-  <div class="container">
-  <div>
-    <label>Set Nickname</label>
-    <input type="text" placeholder="Nickname" [(ngModel)]="nickname">
-  </div>
-  <button (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
-</div>
 </div>
