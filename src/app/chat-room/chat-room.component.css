@@ -1,34 +1,56 @@
 .user_name {
-        color: #afafaf;
-    }
-    .message {
-        padding: 10px !important;
-        transition: all 250ms ease-in-out !important;
-        border-radius: 10px !important;
-        margin-bottom: 4px !important;
-    }
-    .my_message {
-        background: color($colors, primary) !important;
-        color: #000 !important;
-    }
-    .other_message {
-        background: #dcdcdc !important;
-        color: #000 !important;
-    }
-    .time {
-        color: #afafaf;
-        float: right;
-        font-size: small;
-    }
-    .message_row {
-        background-color: #fff;
-    }
-    .my-button{
-      background-color: #AF7AC5;
-      color: #F5EEF8;
-      border-radius: 10px !important;
-      border: none;
-    }
-    .my-input{
-        border-radius: 10px !important;
-    }
+  color: #afafaf;
+}
+.message {
+  padding: 10px !important;
+  transition: all 250ms ease-in-out !important;
+  border-radius: 10px !important;
+  margin: 5px 5px 5px 20px;
+}
+.my_message {
+  background: color($colors, primary) !important;
+  color: #000 !important;
+}
+.other_message {
+  background: #dcdcdc !important;
+  color: #000 !important;
+}
+.time {
+  color: #afafaf;
+  float: right;
+  font-size: small;
+}
+.message_row {
+  background-color: #fff;
+}
+.my-button{
+  width: 80px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: #AF7AC5;
+  color: #F5EEF8;
+  border: none;
+}
+.my-input{
+  height: 60px;
+  width: 500px;
+  border: none;
+  margin-left: 2px;
+  outline: none;
+}
+.my-container{
+  width: 54%;
+  border: 1px solid #AF7AC5;
+  height: 600px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.bottom-div{
+  margin-top: 0px;
+  position: fixed;
+  bottom: 80px;
+}
+hr{
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,19 +1,21 @@
 <div class="container">
-    <b>CHAT</b><br>
+  <div class="my-container">
     <div class="row" *ngFor="let message of messages">
-        <div class="col-xs-18 col-sm-12" *ngIf="message.from !== nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-            <span class="user_name">{{ message.from }}:</span><br>
-            <span>{{message.text}}</span>
-            <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
-        </div>
-        <div class="offset-3 col-9" *ngIf="message.from === nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-            <span class="user_name">{{ message.from }}:</span><br>
-            <span>{{message.text}}</span>
-            <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
-        </div>
+      <div *ngIf="message.from !== nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+        <span class="user_name">{{ message.from }}:</span><br>
+        <span>1{{ message.text }}</span>
+        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
+      </div>
+      <div *ngIf="message.from === nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+        <span class="user_name">{{ message.from }}:</span><br>
+        <span>2{{ message.text }}</span>
+        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
+      </div>
     </div>
-    <input class="my-input" type="text" placeholder="Message" [(ngModel)]="message">
-    <button class="my-button" ion-button clear color="primary" (click)="sendMessage()" [disabled]="message === ''">
-        Send
-    </button>
+    <div class="bottom-div">
+      <hr>
+      <input class="my-input" type="text" placeholder="Message" [(ngModel)]="message">
+      <button class="my-button" ion-button clear color="primary" (click)="sendMessage()" [disabled]="message === ''">Send</button>
+    </div>
+  </div>
 </div>
