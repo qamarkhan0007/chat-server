@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes} from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,12 @@ const routes: Routes = [
     component: HomeComponent
 },
 {
-    path: 'chat-room',
+    path: 'chat-room/:nickname',
     component: ChatRoomComponent
+},
+{
+    path: 'register',
+    component: RegisterComponent
 }
 ];
 

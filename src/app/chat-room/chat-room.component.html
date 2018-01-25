@@ -1,17 +1,20 @@
 <div class="container">
   <div class="my-container">
-    <div class="row" *ngFor="let message of messages">
+    <div class="row shiftMe" *ngFor="let message of messages">
+
       <div *ngIf="message.from !== nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-        <span class="user_name">{{ message.from }}:</span><br>
-        <span>1{{ message.text }}</span>
-        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
+        <span>{{ message.text }}</span><br>
+        <span class="user_name">{{ message.from }}</span><br>
+        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
       </div>
+
       <div *ngIf="message.from === nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-        <span class="user_name">{{ message.from }}:</span><br>
-        <span>2{{ message.text }}</span>
-        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div>
+        <span>{{ message.text }}</span><br>
+        <span class="user_name">{{ message.from }}</span><br>
+        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
       </div>
     </div>
+
     <div class="bottom-div">
       <hr>
       <input class="my-input" type="text" placeholder="Message" [(ngModel)]="message">

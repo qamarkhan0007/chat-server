@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}};
 
 
@@ -13,7 +14,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}};
   declarations: [
     AppComponent,
     HomeComponent,
-    ChatRoomComponent
+    ChatRoomComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

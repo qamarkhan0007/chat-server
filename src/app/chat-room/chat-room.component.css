@@ -1,24 +1,24 @@
 .user_name {
+  font-size: 10px;
   color: #afafaf;
 }
 .message {
-  padding: 10px !important;
+  padding: 10px 10px 2px 10px !important;
   transition: all 250ms ease-in-out !important;
   border-radius: 10px !important;
-  margin: 5px 5px 5px 20px;
+  margin: 2px 2px 2px 10px;
 }
 .my_message {
-  background: color($colors, primary) !important;
-  color: #000 !important;
+  background: white !important;
+  color: #AF7AC5 !important;
 }
 .other_message {
-  background: #dcdcdc !important;
-  color: #000 !important;
+  background: #AF7AC5 !important;
+  color: #F5EEF8 !important;
 }
 .time {
   color: #afafaf;
-  float: right;
-  font-size: small;
+  font-size: 10px;
 }
 .message_row {
   background-color: #fff;
@@ -30,6 +30,7 @@
   background-color: #AF7AC5;
   color: #F5EEF8;
   border: none;
+  border-radius: 1px !important;
 }
 .my-input{
   height: 60px;
@@ -44,6 +45,7 @@
   height: 600px;
   border-radius: 10px;
   margin-left: 10px;
+  background-color: #F5EEF8;
 }
 .bottom-div{
   margin-top: 0px;
@@ -53,4 +55,13 @@
 hr{
   margin: 0px;
   padding: 0px;
+}
+p{
+  font-size: 10px;
+}
+.shiftMe{
+  text-align: center;
+  margin-left: 10px;
+}
+.bgColor{
 }

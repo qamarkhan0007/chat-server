@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   joinChat() {
     this.socket.connect();
     this.socket.emit('set-nickname', this.nickname);
-    this.router.navigate(['/chat-room']);
+    this.router.navigate(['/chat-room/' + this.nickname]);
   }
 
 
