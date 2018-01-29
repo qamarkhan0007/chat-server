@@ -7,6 +7,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { AppService } from './app.service';
+import { HttpModule } from '@angular/http';
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}};
 
 
@@ -21,9 +23,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}};
     BrowserModule,
     SocketIoModule.forRoot(config),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

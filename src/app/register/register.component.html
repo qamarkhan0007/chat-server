@@ -9,10 +9,10 @@
     <th>Registration Form</th>
   </div>
   <form #form="ngForm">
-    Name  <input type="text" placeholder="Enter Name">
-    Address  <input type="text" placeholder="Enter Address">
-    Mobile  <input type="text" placeholder="Enter Mobile">
-    Age  <input type="text" placeholder="Enter Age">
+    Name  <input type="text" placeholder="Enter Name" name="name" [(ngModel)]="name">
+    Address  <input type="text" placeholder="Enter Address" name="address" [(ngModel)]="address">
+    Mobile  <input type="text" placeholder="Enter Mobile" name="mobile" [(ngModel)]="mobile">
+    Age  <input type="text" placeholder="Enter Age" name="age" [(ngModel)]="age">
     <input type="button" value="Submit" (click)="register(form.value)">
   </form>
 </body>

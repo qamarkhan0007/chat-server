@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-register',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _service: AppService) { }
 
   ngOnInit() {
   }
   register(form: any) {
     console.log('form >>>>>>>>>>>>>', form);
+    this._service.register(form).subscribe( res => {
+      console.log('response >>>>>>>', res);
+    });
   }
 
 }
