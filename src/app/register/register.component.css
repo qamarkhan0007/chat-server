@@ -1,5 +1,14 @@
 input[type=text], select {
-    width: 100%;
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -9,9 +18,9 @@ input[type=text], select {
 }
 
 input[type=button] {
-    width: 100%;
-    background-color: #3CBC8D;
-    color: white;
+    position: relative;
+    left: 15%;
+    width: 70%;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -20,7 +29,7 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-    background-color: #3CBC8D !important;
+    background-color: #51ACC7 !important;
 }
 
 div {

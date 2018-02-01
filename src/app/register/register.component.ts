@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,14 +9,19 @@ import { AppService } from '../app.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private _service: AppService) { }
+  constructor(private _service: AppService, private router: Router) { }
 
   ngOnInit() {
   }
   register(form: any) {
-    console.log('form >>>>>>>>>>>>>', form);
+    console.log(form);
     this._service.register(form).subscribe( res => {
-      console.log('response >>>>>>>', res);
+      console.log(res.data);
+      if (res.code === 200) {
+        this.router.navigate(['/home']);
+      }else {
+        this.router.navigate(['/register']);
+      }
     });
   }
 

@@ -13,7 +13,7 @@
   color: #AF7AC5 !important;
 }
 .other_message {
-  background: #AF7AC5 !important;
+  background: #51ACC7 !important;
   color: #F5EEF8 !important;
 }
 .time {
@@ -27,8 +27,8 @@
   width: 80px;
   height: 50px;
   margin-right: 10px;
-  background-color: #AF7AC5;
-  color: #F5EEF8;
+  background-color: #51ACC7;
+  color: #CAE6EE;
   border: none;
   border-radius: 1px !important;
 }
@@ -41,11 +41,11 @@
 }
 .my-container{
   width: 54%;
-  border: 1px solid #AF7AC5;
+  border: 1px solid #51ACC7;
   height: 600px;
   border-radius: 10px;
   margin-left: 10px;
-  background-color: #F5EEF8;
+  background-color: #CAE6EE;
 }
 .bottom-div{
   margin-top: 0px;

@@ -8,9 +8,9 @@ import * as socketIo from 'socket.io-client';
 })
 export class AppComponent implements OnInit {
     ngOnInit() {
-      const socket = socketIo('http://localhost:3000');
-      socket.on('Hello', function(data) {
-        console.log('Data is here', data);
-      });
+      // const socket = socketIo('http://localhost:3000');
+      // socket.on('Hello', function(data) {
+      //   console.log('Data is here', data);
+      // });
     }
 }
