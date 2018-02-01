@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     this._service.register(form).subscribe( res => {
       console.log(res.data);
       if (res.code === 200) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/login']);
       }else {
         this.router.navigate(['/register']);
       }

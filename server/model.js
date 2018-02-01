@@ -9,10 +9,14 @@ var registerSchema = new Schema({
   address: { type: String }
 });
 
-var userReg = module.exports = mongoose.model('registers', registerSchema);
+var mySchema = module.exports = mongoose.model('registers', registerSchema);
 
 module.exports.register = function(data, callback){
-  console.log(data);
-  var obj = new userReg(data);
+  var obj = new mySchema(data);
   obj.save(callback);
+};
+
+module.exports.login = function(condition, callback){
+  console.log(condition);
+  mySchema.findOne({name: condition.name}, callback);
 };

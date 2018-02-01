@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Socket } from 'ng-socket-io';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  nickname = '';
 
-  constructor(private socket: Socket, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
-  joinChat() {
-    this.socket.connect();
-    this.socket.emit('set-nickname', this.nickname);
-    this.router.navigate(['/chat-room/' + this.nickname]);
-  }
-
-
 }
