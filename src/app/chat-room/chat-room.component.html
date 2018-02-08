@@ -2,27 +2,32 @@
   <h3>{{nickname}}</h3>
   <img src="./assets/image/user.ico"/>
 </div>
-<div class="my-container">
   <div class="side-bar">
-    <p>Hello</p>
   </div>
+  <div style="overflow-y:scroll" class="my-container">
 
-  <div class="container">
-    <div class="row" *ngFor="let message of messages">
+    <div class="macro" *ngFor="let message of messages">
 
-      <div *ngIf="message.from !== nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-        <span>{{ message.text }}</span><br>
+      <div *ngIf="message.from !== nickname" class="chat-div">
         <span class="user_name">{{ message.from }}</span><br>
-        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        <div class="make-inline">
+          <div class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+            <span>{{ message.text }}</span><br>
+          </div>
+          <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        </div>
       </div>
 
-      <div *ngIf="message.from === nickname" class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
-        <span>{{ message.text }}</span><br>
+      <div *ngIf="message.from === nickname" class="chat-div">
         <span class="user_name">{{ message.from }}</span><br>
-        <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        <div class="make-inline">
+          <div class="message" [ngClass]="{'my_message': message.from === nickname, 'other_message': message.from !== nickname}">
+            <span>{{ message.text }}</span><br>
+          </div>
+          <div class="time">{{message.created | date:'dd.MM hh:MM'}}</div><br>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="bottom-div form-control">
